@@ -1,0 +1,22 @@
+--Delete single row
+delete from product
+where productname='senmet'
+select*from product
+
+--Delete multiple rows
+delete from product
+where productcode = null
+select*from product
+
+--Delete all rows
+delete from product
+select*from product
+
+--drop table
+drop table product
+select*from product
+
+
+--DRopping particular column
+alter table product drop column productcode
+select*from product

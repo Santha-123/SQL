@@ -1,0 +1,16 @@
+--read rows
+select*from product
+
+--read column values
+select productname from product
+
+--read cell values
+select productname from product
+where productname ='atorsen'
+
+--read multiple columns of specific row
+select productname,productid,productcode from product
+where productname ='atorsen'
+
+
+

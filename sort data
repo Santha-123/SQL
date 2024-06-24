@@ -1,0 +1,15 @@
+--sort column using order by
+select origin from cars order by origin
+
+--order by not retrieved column
+select origin,cylinders from cars order by cylinders
+
+--sort by multiple coulmns
+select origin,cylinders,mpg from cars order by cylinders,mpg
+
+--sort by column position
+select origin,cylinders,mpg from cars order by 1,2
+
+--sort direction
+select origin,cylinders,mpg from cars order by "mpg" desc,2
+select horsepower,mpg,cylinders from cars order by "cylinders" asc,"mpg" desc

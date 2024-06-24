@@ -1,0 +1,17 @@
+--retrieve individual columns
+select origin from cars
+
+--retrieve multiple columns
+select horsepower, mpg from cars
+
+--retrieve all columns
+select *from cars
+
+--retrieve distinct values
+select distinct cylinders from cars
+
+--limiting result
+select model from cars limit 10
+
+-- comment line
+select horsepower from cars limit 3

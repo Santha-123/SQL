@@ -1,0 +1,24 @@
+--Group by function
+select model,count(*)
+from cars group by model
+
+--filter groups
+select model,count(*)
+from cars group by model
+having count(*)<=29
+
+--filter groups with where
+select car,count(*)
+from cars where model=70
+group by car
+
+select car,count(*)
+from cars where model=70
+group by car
+having count(*)<=1
+
+--grouping and sorting
+select model,count(*)as "count"
+from cars group by model
+having count(*)>1
+order by "count" desc

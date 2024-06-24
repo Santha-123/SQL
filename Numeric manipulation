@@ -1,0 +1,12 @@
+--ABS function
+select horsepower,abs(mpg)from cars
+-- pi function
+select origin,horsepower*pi() from cars
+--sqrt function
+select origin,sqrt(horsepower)from cars
+-- trignometry function
+select mpg,origin,horsepower,
+sin(radians(horsepower)),
+cos(radians(horsepower)),
+tan(radians(horsepower))
+from cars

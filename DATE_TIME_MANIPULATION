@@ -1,0 +1,9 @@
+-- select * from students
+-- select "name" , "joining date" from students where "joining date" = '2022-07-25'
+-- select "name" , "joining date" from students where "joining date" > '2022-07-25'
+-- select "name" , "joining date" from students where "joining date" between '2022-08-01' and '2022-08-30'
+-- select * from students where "joining date" >= '2022-08-01' and "joining date" <= '2022-08-30'
+-- select "name" , extract (year from "end date") as "joined year" from students
+-- select "name" , "joining date" from students where extract (year from "end date") = 2023
+-- select "name" , "joining date" from students where extract (month from "end date") = 8
+-- select "name" , "joining date" from students where extract (year from "end date") = 2023
