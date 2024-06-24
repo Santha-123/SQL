@@ -1,0 +1,35 @@
+--avg function
+select avg (acceleration)
+as avg_acc from cars
+
+--count function
+select count(acceleration)
+as total_acc from cars
+
+--max function
+select max(displacement)
+as max_dis from cars
+
+--min function
+select min(displacement)
+as min_dis from cars
+
+-- sum function
+select sum(model)
+as sum_model from cars
+
+select sum(model) from cars
+
+--aggrerate function on where
+select car, acceleration from cars
+where acceleration = (select min(acceleration)from cars)
+
+--aggrerate on distinct values
+select count(distinct(model)) from cars
+
+--combining aggregate function
+select count (*) as horsepower,
+min(model)as min_model,
+max(displacement) as max_dis,
+avg(acceleration)as avg_acc
+from cars
