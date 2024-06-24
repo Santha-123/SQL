@@ -1,0 +1,42 @@
+--Table 1
+create table grb (productid int,productname text,mfgdate text)
+	
+insert into grb values(23,'gulabjamun','feb20'),
+(34,'soanpapdi','jan20'),
+(45,'madrars mixture','dec5')
+	
+select * from grb
+
+--table 2
+create table havells(productid int,productname text,expdate text)
+	
+insert into havells values(23,'comfodeco fan','mar11'),
+(34,'prideplus tubelight','oct7'),
+(25,'mixi','nov6'),
+(67,'grinder','sep22')
+	
+select * from havells
+
+--inner join
+select g.productid,g.productname,g.mfgdate,h.productname,h.expdate from grb g,havells h where g.productid = h.productid
+
+--full join
+select g.productid,g.productname,g.mfgdate,h.productname,h.expdate from grb g
+	full join
+	havells h on g.productid = h.productid
+	
+--left join
+select g.productid,g.productname,g.mfgdate,h.productname,h.expdate from grb g
+	left join
+	havells h on g.productid = h.productid
+	
+--right join
+	select g.productid,g.productname,g.mfgdate,h.productname,h.expdate from grb g
+	right join
+	havells h on g.productid = h.productid
+	
+--cartesian join
+select grb.productid,grb.productname,grb.mfgdate,havells.productname,havells.expdate 
+from grb ,havells 
+	
+	
