@@ -1,0 +1,14 @@
+-- USING LIKE% OPERATOR
+select car,mpg,cylinders
+from cars
+where "car" like 'Chevrolet%'
+
+--USING LIKE% OPERATOR 
+select car,mpg,cylinders
+from cars
+where "car" like '%Fury'
+
+--USING LIKE_ OPERATOR
+select car,mpg,cylinders
+from cars
+where "car" like '%Rebel ___'

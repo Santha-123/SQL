@@ -1,0 +1,24 @@
+--Update cell value
+update product
+set productid=90
+where productname='atorsen'
+select*from product
+
+--update multiple cell values
+update product
+set productid=67,productcode=65479
+where productname='cefret inj'
+select*from product
+
+--update entire column values
+update product
+set productcode=null
+select*from product
+
+--altering column with datatype
+alter table product add column mfgdate int
+select*from product
+
+--changing the datatype in the added column
+alter table product alter column mfgdate varchar
+select*from product

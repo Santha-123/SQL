@@ -1,0 +1,17 @@
+--create stored procedure
+create or replace procedure product
+(
+	productname_ text,
+	productid_ int,
+	productcode_ int
+)
+language plpgsql as
+$$
+begin 
+	insert into product("productname","productid","productcode")
+	values(productname_,productid_,productcode_);
+end
+$$
+
+
+call product('pricareforte',34,2234567)

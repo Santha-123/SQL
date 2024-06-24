@@ -1,0 +1,35 @@
+-- filtering by sub query
+--selecting the cylinders of the car those weight<2000 kg
+select distinct acceleration from cars where model >=70
+--finding cars those of 4 cylinders from previous result and also finding the maximum weight of the car
+select car,cylinders,weight 
+from cars where cylinders in (select distinct (cylinders)
+from cars where weight <= 2000)
+order by weight 
+	
+--trial 
+select distinct(model),weight,car from cars where weight<4000 order by weight 
+select distinct(origin)from cars
+--multi level subquery
+select car,model,weight 
+from cars where model in 
+(Select distinct (model)
+from cars where weight in 
+(select min (Weight)from cars
+where origin = 'Japan'))
+order by weight desc
+
+--common table expression
+with cte_cars as (
+	select origin,cylinders from cars
+	where origin = 'US' and cylinders < 5
+)
+select*from cte_cars
+
+with cte_cars as (
+	select origin,cylinders,model from cars
+	where origin = 'US' and cylinders < 5
+)
+select*from cte_cars where model >=70 
+
+

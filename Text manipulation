@@ -1,0 +1,18 @@
+--left function 
+select left (car,13)from cars
+--right function
+select right(car,13)from cars
+--upper function
+select upper(origin)from cars
+--lower function
+select lower(origin)from cars
+-- ltrim function
+select ltrim(car)from cars
+--rtrim function
+select rtrim (car)from cars
+--trim function
+select trim (car)from cars
+--length function
+select origin,length (origin)from cars
+--substring function
+select car,substring (car,13,15)from cars
