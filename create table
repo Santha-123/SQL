@@ -1,0 +1,29 @@
+-- create table and columns
+create table product (productname text,productid integer,batchcode integer)
+select * from product
+
+--create rows
+insert into product values('atorsen',12,3456)
+select*from product
+
+--insert rows with null values
+insert into product values('senmet',14,null)
+select*from product
+
+--insert multiple rows in single line
+insert into product values('senvital',16,5678),('cobagain OD caps',18,6789),('pricare plus',19,2345),('priacre forte',34,4567)
+select*from product
+
+--create rows-partial insert
+insert into product
+("productname","productid","batchcode")
+values
+('betaret',23,8907)
+select*from product
+
+--insert multiple rows in multiple line
+insert into product
+values
+('tuterlic inj',17,5675),
+('cefret inj',89,6709)
+select*from product
