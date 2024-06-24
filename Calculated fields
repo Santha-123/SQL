@@ -1,0 +1,17 @@
+-- concatenating fields
+select car ||' : ' || displacement from cars
+
+-- use alias to set new column name
+select car ||' : ' || displacement as "car:displacement"from cars
+
+
+--perform math operation
+select car,horsepower*5000
+as "new horsepower value" from cars
+
+--math operation with columns
+select car,horsepower*weight
+as "hp*weight" from cars
+
+
+--
