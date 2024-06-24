@@ -1,0 +1,10 @@
+--union function
+select car,displacement from cars where displacement >= 400
+union
+select car,displacement from cars where origin = 'Europe'
+
+--combine queries and sort result
+select car,displacement,model from cars where displacement >= 400
+union
+select car,displacement,model from cars where origin = 'Europe'
+order by model
