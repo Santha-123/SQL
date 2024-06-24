@@ -1,0 +1,24 @@
+--using and operator
+select horsepower,mpg,origin,model,horsepower
+from cars
+where "model"=70 AND "horsepower"=150
+
+--using or operator
+select horsepower,mpg,origin,model,horsepower
+from cars
+where "model"=70 or"horsepower"=150
+
+--order of execution
+select horsepower,mpg,Origin,model,horsepower
+from cars
+where ("model"=70 or"horsepower"=150)AND Origin='US'
+
+--using in operator
+select horsepower,mpg,origin
+from cars
+where"horsepower" IN (130,165,150)
+
+--using not operator
+select horsepower,mpg,origin
+from cars
+where not origin='Europe'
